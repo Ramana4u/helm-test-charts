@@ -1,0 +1,16 @@
+# Default values for service
+nameOverride: service_helmchart
+name: smcurex_dev_chart
+replicaCount: 1
+service:
+  name: compnyadmin
+  port: 8001
+namespace: kube-system
+dockerregistry: 676834797109.dkr.ecr.ap-southeast-1.amazonaws.com
+image:
+  repository: docker-images
+  tag: latest
+  pullPolicy: Always
+ingress:
+  className: alb
+  path: /
